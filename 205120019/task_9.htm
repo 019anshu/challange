@@ -14,22 +14,50 @@ Example: It should look like this; however, you are open to modify anything you 
 
 
 <!DOCTYPE html>
- <html lang="en">
-     	<head>
-         		<meta charset="UTF-8">
-         		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-         		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-         		<title>Task 9 | Web-Weaver</title>
-         		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
-     	</head> 
-     	<body>
-         		<h1 class="text-center mt-2 display-4">Which Season?</h1>
-         		<hr>
-         		<div class="container text-center">
-             			<h3>Happy <span id="season"> {season} </span></h3>
-         		</div>
-         		<script>
-					
-         		</script>
-     	</body>
- </html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9 | Web-Weaver</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-2 display-4">Which Season?</h1>
+    <hr>
+    <div class="container text-center">
+
+        <button class="btn btn-outline-dark form-group" onclick="getLocation()">Get Season at your current Location</button>
+
+        <h3>Happy <span id="season"> {season} </span></h3>
+    </div>
+    <script>
+        var season = document.getElementById("season");
+
+        function getSeason() {
+            season.innerHTML = "Summer";
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                season.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            season.innerHTML = "Summer at Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>

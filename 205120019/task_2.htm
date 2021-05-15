@@ -37,16 +37,16 @@ Example: It should look like this; however, you are open to modify anything you 
         <div class="mt-4"></div>
         a= <input id="a" style="width: 40px; height: 30px ;" type="number" /> b= <input id="b" style="width: 40px; height: 30px ;" type="number" /> c= <input id="c" style="width: 40px; height: 30px ;" type="number" />
         <br>
-        <button class="btn btn-info mt-2"> Solve </button>
+        <button id="solve" class="btn btn-info mt-2"> Solve </button>
         <br>
         <hr>
-        <span id="opmsg"></span><br> x = <span id="xvalue"></span> , y = <span id="yvalue"></span>
+        <span id="opmsg"></span><br> x = <span id="xvalue">- </span> , y = <span id="yvalue">- </span>
     </div>
     <script type="text/javascript">
         let x, y;
         let a = Document.getElementById("a").value;
-        let a = Document.getElementById("b").value;
-        let a = Document.getElementById("c").value;
+        let b = Document.getElementById("b").value;
+        let c = Document.getElementById("c").value;
         let d = b * b - 4 * a * c;
         if (d > 0) {
             x = (-b + Math.sqrt(d)) / (2 * a);
@@ -59,8 +59,11 @@ Example: It should look like this; however, you are open to modify anything you 
             x = real + imag;
             y = real - imag;
         }
-        document.getElementById('xvalue').innerText = x;
-        document.getElementById('yvalue').innerText = y;
+
+        solve.onclick = function() {
+            xvalue.innerHTML = x;
+            yvalue.innerHTML = y;
+        };
     </script>
 </body>
 
