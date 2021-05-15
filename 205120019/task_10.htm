@@ -1,0 +1,146 @@
+<!-- 
+1.	A Login / Registration Validation Field
+
+Specifications: This task demands that you do the input fields validation on the client side with JS, 
+but with some weird types. The template will be given for the forms. 
+
+Login Form has two fields, email and password. 
+•	Both should contain some characters,  
+•	Email addresses are of the type – #someone@example.com . # must be the first character of email.  Example- #innovac@gmail.com
+•	Password should be between 8-16 characters.
+•	Login button should behave accordingly to the consraints. (user should be unable to login if these conditions are not met)
+
+
+Registration form has 6 fields, email, name, phone, gender, password, confirm password
+
+•	Email addresses are of the type – #someone@example.com. # must be the first character of email. Example- #innovac@gmail.com
+•	Name should not contain any special characters.
+	Phone no. contains 10 digits.
+•	Password should be of 8-16 characters.
+•	Password should contain at least 1 Uppercase, 1 Lowercase, 1 special character and 1 number.
+•	Confirm password should match with password.
+•	All the checkups should be dynamic.
+•	If it can be submitted with any field having invalid input, task will fail.
+•	You can use regex only if you understand it.
+
+Every Information should be visible, i.e. User should be able to see how many things his password includes (As he types them)
+Allowed Libraries: Bootstrap CSS can be used. No External JavaScript library is allowed.
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 10 | Web-Weaver</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+		<style>
+			/* Our CSS */
+			.tab-content {
+				display: none;
+			}
+			.tab-content:target {
+				display: block;
+			}
+			.login-form {
+				width: 340px;
+				margin: 50px auto;
+				font-size: 15px;
+			}
+			.login-form form {
+				margin-bottom: 15px;
+				background: #f7f7f7;
+				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+				padding: 30px;
+			}
+			.login-form h2 {
+				margin: 0 0 15px;
+			}
+			.form-control, .btn {
+				min-height: 38px;
+				border-radius: 2px;
+			}
+			.btn {        
+				font-size: 15px;
+				font-weight: bold;
+			}
+			/* Our CSS Ends */
+			/* Your CSS starts*/
+		</style>
+	</head> 
+    <body>
+        <h1 class="text-center mt-2 mb-4 display-4">Login / Registration</h1>
+        <hr>
+        <div class="container mt-4 text-center">
+        	<!-- Nav tabs -->
+			<nav class="nav nav-pills nav-justified">
+				<a class="nav-item nav-link active" href="#tab1">Login</a>
+				<a class="nav-item nav-link" href="#tab2">Registration</a>
+			</nav>
+			<div id="tab1" class="tab-content justify-content-center container mt-3">
+				
+				<div class="login-form">
+					<form action="/examples/actions/confirmation.php" method="post">
+						<h2 class="text-center">Log in</h2>       
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Email" >
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Log in</button>
+						</div>
+						<div class="clearfix">
+							<label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+							<a href="#" class="float-right">Forgot Password?</a>
+						</div>        
+					</form>
+					<p class="text-center"><a href="#tab2">Create an Account</a></p>
+				</div>
+			</div>
+			<div id="tab2" class="tab-content">
+				<div class="login-form">
+					<form action="/examples/actions/confirmation.php" method="post">
+						<h2 class="text-center">Registration</h2>       
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Full Name">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Phone number">
+						</div>
+						<div class="form-group form-inline">
+							Gender &nbsp; - &nbsp;
+							<input type="radio" class="form-control-sm" placeholder="" value="Male"> &nbsp;Male &nbsp;
+							<input type="radio" class="form-control-sm" placeholder="" value="Female"> &nbsp;Female &nbsp;
+							<input type="radio" class="form-control-sm" placeholder="" value="Female"> &nbsp;Other &nbsp;
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Confirm Password">
+						</div>
+						<div class="form-group">
+							<label class="float-left mb-2 form-check-label"><input type="checkbox"> I Agree to the terms</label>
+						</div>        
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Register</button>
+						</div>
+					</form>
+					<p class="text-center"><a href="#tab1">Already have an account?</a></p>
+				</div>
+			</div>
+			<div id="tab3" class="tab-content">Content of third tab</div>
+		</div>
+        <script>
+        </script>
+		
+    </body>
+</html>

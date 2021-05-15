@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>event</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atomic+Age">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Damion">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <style>
+        @media (min-width:576px) {
+            .rounded-nav,
+            .rounded-nav .nav-link {
+                border-radius: 50rem!important
+            }
+        }
+        
+        .with-arrow .nav-link.active {
+            position: relative
+        }
+        
+        .with-arrow .nav-link.active::after {
+            content: '';
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #2b90d9;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block
+        }
+        
+        .lined .nav-link,
+        .lined .nav-link:hover {
+            border: none;
+            border-bottom: 3px solid transparent
+        }
+        
+        .lined .nav-link.active {
+            background: 0 0;
+            color: #555;
+            border-color: #2b90d9
+        }
+        
+        .nav-pills .nav-link {
+            color: #555
+        }
+        
+        .text-uppercase {
+            letter-spacing: .1em
+        }
+        
+        .footer-basic {
+            padding: 40px 0;
+            background-color: #fff;
+            color: #4b4c4d
+        }
+        
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0
+        }
+        
+        .footer-basic li {
+            padding: 0 10px
+        }
+        
+        .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: .8
+        }
+        
+        .footer-basic ul a:hover {
+            opacity: 1
+        }
+        
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px
+        }
+        
+        .footer-basic .social>a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: .75
+        }
+        
+        .footer-basic .social>a:hover {
+            opacity: .9
+        }
+        
+        .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(52,58,64);">
+    <div class="container text-center" style="margin-top: 22px;">
+        <h1 class="display-3" style="color: rgb(255,255,255);font-family: 'Atomic Age', cursive;">Web Weavers</h1>
+    </div>
+    <h2 class="text-center" style="margin-top: 24px;color: rgb(255,255,255);font-family: Audiowide, cursive;">weaved by &lt;205120019&gt;</h2>
+    <div class="container" style="margin-top: 34px;">
+        <div class="table-responsive table-borderless">
+            <table class="table table-bordered table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>Task no.</th>
+                        <th>Task&nbsp;</th>
+                        <th>Level</th>
+                        <th class="text-center">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dice Roller</td>
+                        <td style="color: #009e60;">Easy</td>
+                        <td class="text-center" style="color: #009e60;"><a class="btn btn-outline-light" role="button" href="task_1.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Quadratic Equation Solver</td>
+                        <td style="color: #009e60;">Easy</td>
+                        <td class="text-center" style="color: #009e60;"><a class="btn btn-outline-light" role="button" href="task_2.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CountDown Timer</td>
+                        <td style="color: #009e60;">Easy</td>
+                        <td class="text-center" style="color: #009e60;"><a class="btn btn-outline-light" role="button" href="task_3.htm" target="_blank">Go!<br></a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Digital Clock</td>
+                        <td style="color: #009e60;">Easy</td>
+                        <td class="text-center" style="color: #009e60;"><a class="btn btn-outline-light" role="button" href="task_4.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Dark Light Mode Switcher</td>
+                        <td style="color: #009e60;">Easy</td>
+                        <td class="text-center" style="color: #009e60;"><a class="btn btn-outline-light" role="button" href="task_5.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rock Paper Scissors</td>
+                        <td style="color: #f9d616;">Medium</td>
+                        <td class="text-center" style="color: #f9d616;"><a class="btn btn-outline-light" role="button" href="task_6.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Truth Table</td>
+                        <td style="color: #f9d616;">Medium</td>
+                        <td class="text-center" style="color: #f9d616;"><a class="btn btn-outline-light" role="button" href="task_7.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>To-Do List</td>
+                        <td style="color: #f9d616;">Medium</td>
+                        <td class="text-center" style="color: #f9d616;"><a class="btn btn-outline-light" role="button" href="task_8.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Which Season it is</td>
+                        <td style="color: #f9d616;">Medium</td>
+                        <td class="text-center" style="color: #f9d616;"><a class="btn btn-outline-light" role="button" href="task_9.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Registration Validation</td>
+                        <td style="color: red;">Hard</td>
+                        <td class="text-center" style="color: red;"><a class="btn btn-outline-light" role="button" href="task_10.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Quiz</td>
+                        <td style="color: red;">Hard</td>
+                        <td class="text-center" style="color: red;"><a class="btn btn-outline-light" role="button" href="task_11.htm" target="_blank">Go!</a></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>General Chatbot</td>
+                        <td style="color: red;">Hard</td>
+                        <td class="text-center" style="color: red;margin-bottom: 0px;"><a class="btn btn-outline-light" role="button" href="task_12.htm" target="_blank">Go!</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer-basic" style="height: 172px;background-color: rgb(52,58,64);">
+        <footer>
+            <p class="text-center" style="color: rgb(255,255,255);font-size: 20px;font-family: Courgette, cursive;">Made with&nbsp;<i class="fa fa-heart"></i>&nbsp; by Innovac Team 21</p>
+            <div class="social" style="color: rgb(255,255,255);"><a href="https://www.instagram.com/pcc_nitt/"><i class="fa fa-instagram"></i></a><a href="https://www.facebook.com/PCC-NITT-111662260436904/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/groups/13972549?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_highlights_detail%3BOaLQ6RIXSTCk5BcT7O%2Fung%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_highlights_detail-highlights_detail_modal_group_link_clicked"><i class="fa fa-linkedin"></i></a><a href="https://www.github.com/pcc-web-weaver"><i class="fa fa-github"></i></a></div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

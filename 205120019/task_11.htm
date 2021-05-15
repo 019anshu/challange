@@ -1,0 +1,59 @@
+<!-- 
+2.	A Quiz Platform
+
+Specifications: This task demands that you build a quiz platform with 5 question, and display the score at the end, 
+Question template will be given to you, however, 
+it should be nearly impossible to find the current answer in the source code (even if it is in the client side).
+After the five question, user can submit and check their score. 
+Their should be an option to reset the quiz, 
+and quiz should be disabled as long as reset is not clicked, 
+You are free to build your imagination. 
+(This means create the questions too)
+
+Allowed Libraries: Bootstrap CSS can be used. No External JavaScript library is allowed.
+
+Example: It should look like this; however, you are open to modify anything you want. It just needs to be functional.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 11 | Web-Weaver</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    </head> 
+    <body>
+        <h1 class="text-center mt-2 display-4">A Quiz Platform</h1>
+        <hr>
+        <div class="container text-center">
+        	<h4>Quiz </h4>
+			<div class="card">
+				<div class="text-left card-header bg-steel">
+					<span class="font-weight-bold">Question 1:</span>
+					<span id="ques1"> Sirius Black can turn into ? </span>
+				</div>
+				<div class="text-left card-body">
+					<input type="radio" name="ques1" id="ques1"> A Deer
+					<hr>
+					<input type="radio" name="ques1" id="ques1"> A Black Dog
+					<hr>
+					<input type="radio" name="ques1" id="ques1"> A Wolf
+					<hr>
+					<input type="radio" name="ques1" id="ques1"> A Rat
+				</div>
+				
+			</div>
+
+			<button class="btn btn-primary mt-4">Submit</button>
+			<button class="float-right btn mt-4 btn-outline-primary">Reset</button>
+        </div>
+
+		<div id="results" class="container mt-4 text-center">
+			<h4>Results</h4>
+		</div>
+        <script>
+        </script>
+    </body>
+</html>

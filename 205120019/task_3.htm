@@ -1,0 +1,112 @@
+<!-- 
+Specifications: This task demands that you create a countdown timer. 
+Code  should not be from an older project, It should not be copy pasted, 
+It should  show the countdown to the new year 2022. The timer should not stop at 59 😉 
+
+Allowed Libraries: Bootstrap CSS can be used. No External JavaScript library is allowed.
+
+Example: It should look like this, however, you are open to modify anything you want. It just needs to be functional.
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 | Web-Weaver</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <style>
+        #day,
+        #hour,
+        #minute,
+        #second {
+            color: aliceblue;
+            padding: 10px;
+            font-size: 50px;
+            width: 100px;
+            height: 100px;
+            -webkit-animation: mover 1s infinite alternate;
+            animation: mover 2s infinite alternate;
+        }
+        
+        @keyframes mover {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-2 display-4">Count Down Timer</h1>
+    <hr>
+    <div class="container justify-content-center text-center">
+        <h2>Time Until the new year 2022</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div id="day" class="bg-dark rounded">00</div>
+            </div>
+            <div class="col">
+                <div id="hour" class="bg-dark rounded">00</div>
+            </div>
+            <div class="col">
+                <div id="minute" class="bg-dark rounded">00</div>
+            </div>
+            <div class="col">
+                <div id="second" class="bg-dark rounded">00</div>
+            </div>
+        </div>
+        <div class="row font-weight-bolder">
+            <div class="col text-left">
+                <div>Days</div>
+            </div>
+            <div class="col text-left">
+                <div>Hours</div>
+            </div>
+            <div class="col text-left">
+                <div>Minutes</div>
+            </div>
+            <div class="col text-left">
+                <div>Seconds</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var countDate = new Date('Jan 1, 2022 00:00:00').getTime();
+
+        function count() {
+            var now = new Date().getTime();
+            gap = countDate - now;
+
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d = Math.floor(gap / (day));
+            var h = Math.floor((gap % (day)) / (hour));
+            var m = Math.floor((gap % (hour)) / (minute));
+            var s = Math.floor((gap % (minute)) / (second));
+
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+        }
+        setInterval(function() {
+            count();
+        }, 1000)
+    </script>
+
+</body>
+
+</html>

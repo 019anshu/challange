@@ -1,0 +1,74 @@
+<!-- 
+
+Specifications: This task demands that you create a Logical gates truth table generator. 
+It should function with at least 2 variables and all logical gates (AND,OR,NOT,XOR). 
+The Input format is on you, how you take the input. 
+The result should contain the truth table and an option to reset the field.
+
+You will get the fixed score if it shows AND,OR,NAND,NOR. Bonus task includes NOT, XOR, 
+Input Validation, Gate Combo.
+
+Templete is there to help you. If you prefer to use your own, you can.
+
+Allowed Libraries: Bootstrap CSS can be used. No External JavaScript library is allowed.
+
+Example: It should look like this; however, you are open to modify anything you want.
+It just needs to be functional.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 7 | Web-Weaver</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    </head> 
+    <body>
+    	<h1 class="text-center display-4">Truth Table Generator</h1>
+    	<hr>
+    	<div class="container text-center">
+    		Generates the truth table for up to 2 variable operations.
+			<!-- Specifying the input is up to you-->
+			<br>
+			<hr>
+			Variables : X, Y; Operation: <input type="text" id="operation"/> <button class="btn btn-dark ml-3">Show</button>
+
+			<hr>
+			<div class="container justify-content-center">
+				<table class="table">
+					<tr>
+						<th>X</th>
+						<th>Y</th>
+						<th id="ops">Operation</th>
+					</tr>
+					<tr>
+						<td>T</td>
+						<td>T</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>T</td>
+						<td>F</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>F</td>
+						<td>T</td>
+						<td></td>
+					</tr><tr>
+						<td>F</td>
+						<td>F</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+
+
+
+    	</div>
+    	<script>
+    	</script>
+    </body>
+</html>
