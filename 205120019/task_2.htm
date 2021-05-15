@@ -16,34 +16,52 @@ Example: It should look like this; however, you are open to modify anything you 
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Task 2 | Web-Weaver</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
-		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    </head> 
-    <body>
-		<h1 class="text-center mt-2 display-4">Quadratic Equation Solver</h1>
-		<hr>
-		<div class="container text-center">
-			Equation is 
-			<div lang="latex">
-				ax^2+bx+c
-			</div>
-			<div class="mt-4"></div>
-			a= <input style="width: 40px; height: 30px ;" type="number" />
-			b= <input style="width: 40px; height: 30px ;" type="number" />
-			c= <input style="width: 40px; height: 30px ;" type="number" />
-			<br>
-			<button class="btn btn-info mt-2"> Solve </button>
-			<br>
-			<hr>
-			<span id = "opmsg"></span><br>
-			x = <span id="xvalue"></span> , y = <span id = "yvalue"></span>
-		</div>
-		<script>
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 | Web-Weaver</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center mt-2 display-4">Quadratic Equation Solver</h1>
+    <hr>
+    <div class="container text-center">
+        Equation is
+        <div lang="latex">
+            ax^2+bx+c
+        </div>
+        <div class="mt-4"></div>
+        a= <input id="a" style="width: 40px; height: 30px ;" type="number" /> b= <input id="b" style="width: 40px; height: 30px ;" type="number" /> c= <input id="c" style="width: 40px; height: 30px ;" type="number" />
+        <br>
+        <button class="btn btn-info mt-2"> Solve </button>
+        <br>
+        <hr>
+        <span id="opmsg"></span><br> x = <span id="xvalue"></span> , y = <span id="yvalue"></span>
+    </div>
+    <script type="text/javascript">
+        let x, y;
+        let a = Document.getElementById("a").value;
+        let a = Document.getElementById("b").value;
+        let a = Document.getElementById("c").value;
+        let d = b * b - 4 * a * c;
+        if (d > 0) {
+            x = (-b + Math.sqrt(d)) / (2 * a);
+            y = (-b - Math.sqrt(d)) / (2 * a);
+        } else if (d == 0) {
+            x = y = (-b) / (2 * a);
+        } else {
+            let real = (-b / (2 * a)).toFixed(3);
+            let imag = (Math.sqrt(-d) / (2 * a)).toFixed(3);
+            x = real + imag;
+            y = real - imag;
+        }
+        document.getElementById('xvalue').innerText = x;
+        document.getElementById('yvalue').innerText = y;
+    </script>
+</body>
+
 </html>
